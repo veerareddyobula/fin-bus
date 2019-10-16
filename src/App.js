@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Router, browserHistory, Route, Link } from 'react-router';
+import {HashRouter, Route, Link} from 'react-router-dom';
 import './App.css';
 
 const NavBar = () => (
   <div className="navbar">
     <Link to="/">Feed</Link>
-    <Link to="/profile">Profile</Link>
+    <Link to="profile">Profile</Link>
   </div>
 );
 
@@ -29,10 +29,10 @@ const Profile = (props) => (
 class App extends Component {
   render() {
     return (
-      <Router history={browserHistory}>
-        <Route path="/" component={Feed}/>
-        <Route path="/profile" component={Profile}/>
-      </Router>
+      <HashRouter>
+          <Route exact path="/profile" component={Profile}/>
+          <Route exact path="/" component={Feed}/>
+      </HashRouter>
     );
   }
 }
