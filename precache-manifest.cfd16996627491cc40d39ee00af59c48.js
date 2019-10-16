@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9bb9bb8e61c885915d4d0c5996471451",
+    "revision": "baba2d1adc1923374d5bf3baec063a4d",
     "url": "/fin-bus/index.html"
   },
   {
-    "revision": "1cf356cc158e1e8f81f0",
+    "revision": "4529801802f436623861",
     "url": "/fin-bus/static/css/main.b6f51580.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fin-bus/static/js/2.55d856c2.chunk.js"
   },
   {
-    "revision": "1cf356cc158e1e8f81f0",
-    "url": "/fin-bus/static/js/main.899c28b8.chunk.js"
+    "revision": "4529801802f436623861",
+    "url": "/fin-bus/static/js/main.e5abec3f.chunk.js"
   },
   {
     "revision": "cc7452e41139385f8327",
