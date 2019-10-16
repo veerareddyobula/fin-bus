@@ -1,38 +1,48 @@
 import React, { Component } from 'react';
-import {HashRouter, Route, Link} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+
 import './App.css';
 
 const NavBar = () => (
   <div className="navbar">
-    <Link to="/">Feed</Link>
-    <Link to="profile">Profile</Link>
+    <a href="/">Feed</a>
+    <a href="profile">Profile</a>
   </div>
 );
 
-const Template = ({ title }) => (
-  <div>
-    <NavBar />
-    <p className="page-info">
-      This is the {title} page.
-    </p>
-  </div>
-);
+const Feed = () => {
+  console.log('--==== Template ::: Feed ====-- ')
+  return (
+    <div>
+      <p className="page-info">
+        This is the Feed page.
+      </p>
+    </div>
+  )
+};
 
-const Feed = (props) => (
-  <Template title="Feed"/>
-);
-
-const Profile = (props) => (
-  <Template title="Profile"/>
-);
+const Profile = () => {
+  console.log('--==== Template ::: Prof ====-- ')
+  return (
+    <div>
+      <p className="page-info">
+        This is the Profile page.
+      </p>
+    </div>
+  )
+};
 
 class App extends Component {
   render() {
+    console.log('--==== App Component Render Method ====--')
     return (
-      <HashRouter>
-          <Route exact path="/profile" component={Profile}/>
-          <Route exact path="/" component={Feed}/>
-      </HashRouter>
+      <div>
+        <NavBar />
+        <BrowserRouter>
+            <Route exact path="/profile" component={Profile}/>
+            <Route exact path="/" component={Feed}/>
+        </BrowserRouter>
+      </div>
     );
   }
 }
