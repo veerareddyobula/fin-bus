@@ -1,46 +1,21 @@
 import React, { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
+import 'jquery/dist/jquery';
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './App.css';
+import Default from './containers/default';
+import SignInContainer from './containers/signIn'
 
-const NavBar = () => (
-  <div className="navbar">
-    <a href="#/">Feed</a>
-    <a href="#/profile">Profile</a>
-  </div>
-);
-
-const Feed = () => {
-  console.log('--==== Template ::: Feed ====-- ')
-  return (
-    <div>
-      <p className="page-info">
-        This is the Feed page.
-      </p>
-    </div>
-  )
-};
-
-const Profile = () => {
-  console.log('--==== Template ::: Prof ====-- ')
-  return (
-    <div>
-      <p className="page-info">
-        This is the Profile page.
-      </p>
-    </div>
-  )
-};
 
 class App extends Component {
   render() {
     console.log('--==== App Component Render Method ====--')
     return (
-      <div>
-        <NavBar />
+      <div className="container-fluid p-0">
         <HashRouter>
-            <Route exact path="/profile" component={Profile}/>
-            <Route exact path="/" component={Feed}/>
+            <Route exact path="/signIn" component={SignInContainer}/>
+            <Route exact path="/" component={Default}/>
         </HashRouter>
       </div>
     );
