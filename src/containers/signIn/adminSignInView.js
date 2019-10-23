@@ -45,8 +45,8 @@ export const AdminSignInView = (props) => {
             </div>
           </div>
           <div className="card-footer d-flex justify-content-between flex-wrap">
-            <a className="nav-link my-1 col-md-4" href="#item-1-2">
-              Sign Up... now!!
+            <a className="btn btn-secondary col-md-3" href="#/signUp">
+              Sign Up
             </a>
             <button type="submit" className="btn btn-primary col-md-3" onClick={(event)=> onSubmit()}>
               Sign In

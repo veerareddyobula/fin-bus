@@ -7,10 +7,14 @@ import { AdminSignInView } from "./adminSignInView";
 import { TokenSignInView } from "./tokenSignInView";
 
 const SignInFlexWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  @media only screen and (min-width: 1070px) {
+    grid-template-columns: 50%;
+  }
 `;
 
 const SignInContainer = () => {
@@ -23,7 +27,7 @@ const SignInContainer = () => {
     console.log("--== I am onSignInSubmit ==-- ", signInStore);
   };
   return (
-    <SignInFlexWrapper  className="p-2 offset-md-4 col-md-4 col-12">
+    <SignInFlexWrapper>
       <div className="card col-12 p-0">
         <div className="card-header">
           <div className="card-title d-flex justify-content-between">
