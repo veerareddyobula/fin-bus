@@ -1,6 +1,22 @@
 import React from "react";
+import { useQuery } from 'react-apollo-hooks'
 import styled from "styled-components";
+import gql from 'graphql-tag';
 
+const GET_CONTACT_DETAILS_CODE = gql`
+  query codeByName($name: String!){
+    codeByName(name: $name){
+      id
+      name
+      codeValueId {
+        id
+        name
+        description
+        sequenceOrder
+      }
+    }
+  }
+`;
 const AdministratorForm = styled.div`
   display: grid;
   grid-column-gap: 2rem;
@@ -11,6 +27,10 @@ const AdministratorForm = styled.div`
 
 export const OrgPrimaryContactTblList = ({store}) => {
   const {firstName, lastName, email, password, confirmPassword, mobileNumber} = store || {};
+  const { loading, error, data } = useQuery(GET_CONTACT_DETAILS_CODE, {
+    variables: { name: "Contact Details Info" },
+  });
+  console.log('-== contactDetails Query --== ', loading, error, data)
   return (
     <>
       <h6 className="p-2 border-bottom text-secondary">Register Administrator Details</h6>
