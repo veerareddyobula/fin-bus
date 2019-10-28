@@ -8,8 +8,8 @@ import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
 import ApolloClient from "apollo-boost";
 
 import Default from "./containers/default";
-import SignInContainer from "./containers/signIn";
-import SignUpContainer from "./containers/signup";
+import SignInContainer from "./containers/auth/signIn";
+import SignUpContainer from "./containers/auth/signUp";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/"
