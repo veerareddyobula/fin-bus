@@ -2,11 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useMutation } from "react-apollo-hooks";
 import gql from "graphql-tag";
-import { observer } from "mobx-react";
 import { Formik, Field, Form } from "formik";
 
 import SiteLogo from "./../../../components/common/siteLogo";
-import Store from "./../store";
 
 const SignUpGridWrapper = styled.div`
   margin-top: 1rem;
@@ -51,9 +49,7 @@ const SIGN_UP_FORMS_MUTATION = gql`
   }
 `;
 
-const store = new Store();
-
-const SignUpContainer = observer(({ history }) => {
+const SignUpContainer = ({ history }) => {
   const [validations, setValidations] = React.useState();
   const [signup] = useMutation(SIGN_UP_FORMS_MUTATION, {
     fetchPolicy: "no-cache",
@@ -76,8 +72,10 @@ const SignUpContainer = observer(({ history }) => {
     });
     console.log("--== onSubmit ---== ", data, errors);
     if (data && data.signIn) {
-      store.setToken(data.signIn.token);
       setValidations([]);
+      const {signup} = data;
+      localStorage.setItem('token', signup.token);
+      history.push("/app/default/home");
     } else if (errors && errors.length > 0) {
       setValidations(errors);
     }
@@ -156,9 +154,8 @@ const SignUpContainer = observer(({ history }) => {
               }}
               onSubmit={values => {
                 onSignUpSubmit(values);
-                console.log("--== validations ", validations);
                 if (validations && validations.length === 0) {
-                  history.push("/signIn");
+                  history.push("/app/default/home");
                 }
               }}
             >
@@ -331,6 +328,6 @@ const SignUpContainer = observer(({ history }) => {
       </div>
     </div>
   );
-});
+};
 
 export default SignUpContainer;
