@@ -5,12 +5,21 @@ import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ApolloProvider as ApolloHooksProvider } from "react-apollo-hooks";
+import "bootstrap-social/bootstrap-social.css";
+import "./assets/css/style.css";
+import "./assets/css/components.css";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import Default from "./containers/default";
-import SignInContainer from "./containers/auth/signIn";
+import LoginPage from './pages/auth/login'
+// import SignInContainer from "./containers/auth/signIn";
 import SignUpContainer from "./containers/auth/signUp";
 import AppRouter from "./containers/app/router";
 import { client } from "./apollo-client";
+
+library.add(fab, fas)
 
 // const client = new ApolloClient({
 //   uri: "http://localhost:4000/"
@@ -26,7 +35,7 @@ class App extends Component {
             <HashRouter>
               <Route exact path="/app/*" component={AppRouter} />
               <Route exact path="/signUp" component={SignUpContainer} />
-              <Route exact path="/signIn" component={SignInContainer} />
+              <Route exact path="/signIn" component={LoginPage} />
               <Route exact path="/" component={Default} />
             </HashRouter>
           </div>
