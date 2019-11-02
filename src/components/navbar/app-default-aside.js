@@ -3,9 +3,6 @@ import * as $ from "jquery";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AppDefaultASide = () => {
-
-    
-
   React.useEffect(() => {
     if ($(".main-sidebar").length) {
       $(".main-sidebar .sidebar-menu li a.has-dropdown")
@@ -68,7 +65,7 @@ const AppDefaultASide = () => {
         <li className="nav-item dropdown active">
           <a href="#/" className="nav-link has-dropdown">
             <FontAwesomeIcon icon={["fas", "fire"]} />
-            <span>Dashboard</span>
+            <span className="ml-2">Dashboard</span>
           </a>
           <ul className="dropdown-menu">
             <li>
@@ -83,25 +80,32 @@ const AppDefaultASide = () => {
             </li>
           </ul>
         </li>
-        <li className="menu-header">Starter</li>
+        <li className="menu-header">Admin</li>
         <li className="nav-item dropdown">
           <a href="#/" className="nav-link has-dropdown" data-toggle="dropdown">
-            <FontAwesomeIcon icon={["fas", "columns"]} /> <span>Layout</span>
+            <FontAwesomeIcon icon={["fas", "bus"]} /> <span className="ml-2">Buses</span>
           </a>
           <ul className="dropdown-menu">
             <li>
-              <a className="nav-link" href="layout-default.html">
-                Default Layout
+              <a className="nav-link" href="#/app/admin/buses/manage">
+                Manage Buses
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li className="nav-item dropdown">
+          <a href="#/" className="nav-link has-dropdown" data-toggle="dropdown">
+            <FontAwesomeIcon icon={["fas", "user-plus"]} /> <span className="ml-2">Resources</span>
+          </a>
+          <ul className="dropdown-menu">
+            <li>
+              <a className="nav-link" href="#/app/admin/resource/employees/manage">
+                Manage Employees
               </a>
             </li>
             <li>
-              <a className="nav-link" href="layout-transparent.html">
-                Transparent Sidebar
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" href="layout-top-navigation.html">
-                Top Navigation
+              <a className="nav-link" href="#/app/admin/resource/Offices/manage">
+                Manage Offices
               </a>
             </li>
           </ul>
