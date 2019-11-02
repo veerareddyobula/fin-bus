@@ -59,14 +59,11 @@ const SignUpContainer = ({ history }) => {
     const { data, errors } = await signup({
       variables: { ...payload }
     });
-    console.log("--== onSubmit success ---== ", data);
     if (data && data.signup) {
-      console.log("--== onSubmit success ---== ", data);
       setValidations([]);
       const { signup } = data;
       localStorage.setItem("token", signup.token);
     } else if (errors && errors.length > 0) {
-      console.log("--== onSubmit failure ---== ", errors);
       setValidations(errors);
     }
   };

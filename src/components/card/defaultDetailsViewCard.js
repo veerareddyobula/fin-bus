@@ -23,8 +23,11 @@ export default () => {
                         Simplify your money system with Fin-Bus. Fin-Bus makes Your Money Work For You
                         </p>
                         <div className="cta">
-                            <a href="#/signIn" className="btn btn-lg btn-warning btn-icon icon-right">Travel In Fin-Bus For Free!</a>
+                            <a href="#/signUp" className="btn btn-lg btn-warning btn-icon icon-right">Travel In Fin-Bus For Free!</a>
                         </div>
+                    </div>
+                    <div className="col-lg-5 pl-lg-5 d-lg-block d-none text-center">
+                        <img src="img/bus_PNG8604.png" alt="Fin-Bus" />
                     </div>
                 </div>
             </div>
