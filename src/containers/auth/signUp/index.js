@@ -38,6 +38,13 @@ const SignUpContainer = ({ history }) => {
     errorPolicy: "all"
   });
 
+  React.useEffect(()=>{
+    console.log('--=== validations ', validations)
+    if (validations && validations.length === 0) {
+      history.push("/app/default/home")
+    }
+  }, [validations, history])
+
   const onSignUpSubmit = async values => {
     const payload = {
       regOrgUnitName: values.regOrgUnitName,
@@ -52,13 +59,14 @@ const SignUpContainer = ({ history }) => {
     const { data, errors } = await signup({
       variables: { ...payload }
     });
-    console.log("--== onSubmit ---== ", data, errors);
-    if (data && data.signIn) {
+    console.log("--== onSubmit success ---== ", data);
+    if (data && data.signup) {
+      console.log("--== onSubmit success ---== ", data);
       setValidations([]);
       const { signup } = data;
       localStorage.setItem("token", signup.token);
-      history.push("/app/default/home");
     } else if (errors && errors.length > 0) {
+      console.log("--== onSubmit failure ---== ", errors);
       setValidations(errors);
     }
   };
@@ -139,9 +147,6 @@ const SignUpContainer = ({ history }) => {
                     }}
                     onSubmit={values => {
                       onSignUpSubmit(values);
-                      if (validations && validations.length === 0) {
-                        history.push("/app/default/home");
-                      }
                     }}
                   >
                     {({ errors, touched, handleSubmit }) => (
