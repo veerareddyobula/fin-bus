@@ -1,229 +1,201 @@
-import React from 'react';
+import React from "react";
+import * as $ from 'jquery';
+import AppDefaultNavbar from "./../../../components/navbar/app-default-navbar";
+import AppDefaultASide from "./../../../components/navbar/app-default-aside";
 
 const AppDefaultContainer = () => {
-    return (
-        <div id="app">
-    <div class="main-wrapper">
-      <div class="navbar-bg"></div>
-      <nav class="navbar navbar-expand-lg main-navbar">
-        <form class="form-inline mr-auto">
-          <ul class="navbar-nav mr-3">
-            <li><a href="#/" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-            <li><a href="#/" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
-          </ul>
-          <div class="search-element">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250" />
-            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-            <div class="search-backdrop"></div>
-            <div class="search-result">
-              <div class="search-header">
-                Histories
-              </div>
-              <div class="search-item">
-                <a href="#/">How to hack NASA using CSS</a>
-                <a href="#/" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-item">
-                <a href="#/">Kodinger.com</a>
-                <a href="#/" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-item">
-                <a href="#/">#Stisla</a>
-                <a href="#/" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-header">
-                Result
-              </div>
-              <div class="search-item">
-                <a href="#/">
-                  <img class="mr-3 rounded" width="30" src="img/products/product-3-50.png" alt="product" />
-                  oPhone S9 Limited Edition
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#/">
-                  <img class="mr-3 rounded" width="30" src="img/products/product-2-50.png" alt="product" />
-                  Drone X2 New Gen-7
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#/">
-                  <img class="mr-3 rounded" width="30" src="img/products/product-1-50.png" alt="product" />
-                  Headphone Blitz
-                </a>
-              </div>
-              <div class="search-header">
-                Projects
-              </div>
-              <div class="search-item">
-                <a href="#/">
-                  <div class="search-icon bg-danger text-white mr-3">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  Stisla Admin Template
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#/">
-                  <div class="search-icon bg-primary text-white mr-3">
-                    <i class="fas fa-laptop"></i>
-                  </div>
-                  Create a new Homepage Design
-                </a>
-              </div>
-            </div>
-          </div>
-        </form>
-        <ul class="navbar-nav navbar-right">
-          <li class="dropdown dropdown-list-toggle"><a href="#/" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right">
-              <div class="dropdown-header">Messages
-                <div class="float-right">
-                  <a href="#/">Mark All As Read</a>
-                </div>
-              </div>
-              <div class="dropdown-list-content dropdown-list-message">
-                <a href="#/" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="avatar" src="img/avatar/avatar-1.png" class="rounded-circle" />
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b>
-                    <p>Hello, Bro!</p>
-                    <div class="time">10 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#/" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="avatar" src="img/avatar/avatar-2.png" class="rounded-circle" />
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Dedik Sugiharto</b>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#/" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="avatar" src="img/avatar/avatar-3.png" class="rounded-circle" />
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Agung Ardiansyah</b>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#/" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="avatar" src="img/avatar/avatar-4.png" class="rounded-circle" />
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Ardian Rahardiansyah</b>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
-                    <div class="time">16 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#/" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="avatar" src="img/avatar/avatar-5.png" class="rounded-circle" />
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Alfa Zulkarnain</b>
-                    <p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                    <div class="time">Yesterday</div>
-                  </div>
-                </a>
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#/">View All <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="dropdown dropdown-list-toggle"><a href="#/" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right">
-              <div class="dropdown-header">Notifications
-                <div class="float-right">
-                  <a href="#/">Mark All As Read</a>
-                </div>
-              </div>
-              <div class="dropdown-list-content dropdown-list-icons">
-                <a href="#/" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-icon bg-primary text-white">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Template update is available now!
-                    <div class="time text-primary">2 Min Ago</div>
-                  </div>
-                </a>
-                <a href="#/" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
-                    <i class="far fa-user"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>You</b> and <b>Dedik Sugiharto</b> are now friends
-                    <div class="time">10 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#/" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-success text-white">
-                    <i class="fas fa-check"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#/" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-danger text-white">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Low disk space. Let's clean it!
-                    <div class="time">17 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#/" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
-                    <i class="fas fa-bell"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Welcome to Stisla template!
-                    <div class="time">Yesterday</div>
-                  </div>
-                </a>
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#/">View All <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="dropdown"><a href="#/" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="avatar" src="img/avatar/avatar-1.png" class="rounded-circle mr-1" />
-            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-title">Logged in 5 min ago</div>
-              <a href="features-profile.html" class="dropdown-item has-icon">
-                <i class="far fa-user"></i> Profile
-              </a>
-              <a href="features-activities.html" class="dropdown-item has-icon">
-                <i class="fas fa-bolt"></i> Activities
-              </a>
-              <a href="features-settings.html" class="dropdown-item has-icon">
-                <i class="fas fa-cog"></i> Settings
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#/" class="dropdown-item has-icon text-danger">
-                <i class="fas fa-sign-out-alt"></i> Logout
-              </a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      </div>
-      </div>
-    )
+  const [nowLayoutClass, setNowLayoutClass] = React.useState()
+
+  const sidebar_dropdown = () => {
+    if($(".main-sidebar").length) {
+
+      $(".main-sidebar .sidebar-menu li a.has-dropdown").off('click').on('click', function() {
+        var me     = $(this);
+        var active = false;
+        if(me.parent().hasClass("active")){
+          active = true;
+        }
+        
+        $('.main-sidebar .sidebar-menu li.active > .dropdown-menu').slideUp(500, function() {
+          return false;
+        });
+        
+        $('.main-sidebar .sidebar-menu li.active').removeClass('active');
+
+        if(active===true) {
+          me.parent().removeClass('active');          
+          me.parent().find('> .dropdown-menu').slideUp(500, function() {            
+            return false;
+          });
+        }else{
+          me.parent().addClass('active');          
+          me.parent().find('> .dropdown-menu').slideDown(500, function() {            
+            return false;
+          });
+        }
+
+        return false;
+      });
+
+      $('.main-sidebar .sidebar-menu li.active > .dropdown-menu').slideDown(500, function() {
+        return false;
+      });
+    }
+  }
+
+  const toggle_sidebar_mini = (mini) => {
+    let body = $('body');
+
+    if(!mini) {
+      body.removeClass('sidebar-mini');
+      $(".main-sidebar").css({
+        overflow: 'hidden'
+      });
+      $(".main-sidebar .sidebar-menu > li > ul .dropdown-title").remove();
+      $(".main-sidebar .sidebar-menu > li > a").removeAttr('data-toggle');
+      $(".main-sidebar .sidebar-menu > li > a").removeAttr('data-original-title');
+      $(".main-sidebar .sidebar-menu > li > a").removeAttr('title');
+    }else{
+      body.addClass('sidebar-mini');
+      body.removeClass('sidebar-show');
+      $(".main-sidebar .sidebar-menu > li").each(function() {
+        let me = $(this);
+
+        if(me.find('> .dropdown-menu').length) {
+          me.find('> .dropdown-menu').hide();
+          me.find('> .dropdown-menu').prepend('<li className="dropdown-title pt-3">'+ me.find('> a').text() +'</li>');
+        }else{
+          me.find('> a').attr('data-toggle', 'tooltip');
+          me.find('> a').attr('data-original-title', me.find('> a').text());
+          $("[data-toggle='tooltip']").tooltip({
+            placement: 'right'
+          });
+        }
+      });
+    }
+  }
+
+
+  const toggleSidebar = (event)=>{
+    event.preventDefault();
+    var body = $("body"),
+  w = $(window);
+
+if(w.outerWidth() <= 1024) {
+  body.removeClass('search-show search-gone');
+  if(body.hasClass('sidebar-gone')) {
+    body.removeClass('sidebar-gone');
+    body.addClass('sidebar-show');
+  }else{
+    body.addClass('sidebar-gone');
+    body.removeClass('sidebar-show');
+  }
+
+}else{
+  body.removeClass('search-show search-gone');
+  if(body.hasClass('sidebar-mini')) {
+    toggle_sidebar_mini(false);
+  }else{
+    toggle_sidebar_mini(true);
+  }
 }
+
+return false;
+}
+
+  const toggleLayout = ()=>{
+    var w = $(window),
+      layout_class = $('body').attr('className') || '',
+      layout_classes = (layout_class.trim().length > 0 ? layout_class.split(' ') : '');
+    if(layout_classes.length > 0) {
+      layout_classes.forEach(function(item) {
+        if(item.indexOf('layout-') !== -1) {
+          setNowLayoutClass(item);
+        }
+      });
+    }
+    if(w.outerWidth() <= 1024) {
+      if($('body').hasClass('sidebar-mini')) {
+        toggle_sidebar_mini(false);
+      }
+      $("body").addClass("sidebar-gone");
+      $("body").removeClass("layout-2 layout-3 sidebar-mini sidebar-show");
+      $("body").off('click touchend').on('click touchend', function(e) {
+        if($(e.target).hasClass('sidebar-show') || $(e.target).hasClass('search-show')) {
+          $("body").removeClass("sidebar-show");
+          $("body").addClass("sidebar-gone");
+          $("body").removeClass("search-show");
+        }
+      });
+      
+
+      if(nowLayoutClass === 'layout-3') {
+        let nav_second_classes = $(".navbar-secondary").attr('class'),
+          nav_second = $(".navbar-secondary");
+
+        nav_second.attr('data-nav-classes', nav_second_classes);
+        nav_second.removeAttr('class');
+        nav_second.addClass('main-sidebar');
+
+        let main_sidebar = $(".main-sidebar");
+        main_sidebar.find('.container').addClass('sidebar-wrapper').removeClass('container');
+        main_sidebar.find('.navbar-nav').addClass('sidebar-menu').removeClass('navbar-nav');
+        main_sidebar.find('.sidebar-menu .nav-item.dropdown.show a').click();
+        main_sidebar.find('.sidebar-brand').remove();
+        main_sidebar.find('.sidebar-menu').before($('<div>', {
+          class: 'sidebar-brand'
+        }).append(
+          $('<a>', {
+            href: $('.navbar-brand').attr('href'),
+          }).html($('.navbar-brand').html())
+        ));
+
+        sidebar_dropdown();
+        $(".main-wrapper").removeClass("container");
+      }
+    }else {
+      $("body").removeClass("sidebar-gone sidebar-show");
+      if(nowLayoutClass)
+        $("body").addClass(nowLayoutClass);
+
+      let nav_second_classes = $(".main-sidebar").attr('data-nav-classes'),
+        nav_second = $(".main-sidebar");
+
+      if(nowLayoutClass === 'layout-3' && nav_second.hasClass('main-sidebar')) {
+        nav_second.find(".sidebar-menu li a.has-dropdown").off('click');
+        nav_second.find('.sidebar-brand').remove();
+        nav_second.removeAttr('class');
+        nav_second.addClass(nav_second_classes);
+
+        let main_sidebar = $(".navbar-secondary");
+        main_sidebar.find('.sidebar-wrapper').addClass('container').removeClass('sidebar-wrapper');
+        main_sidebar.find('.sidebar-menu').addClass('navbar-nav').removeClass('sidebar-menu');
+        main_sidebar.find('.dropdown-menu').hide();
+        main_sidebar.removeAttr('style');
+        main_sidebar.removeAttr('tabindex');
+        main_sidebar.removeAttr('data-nav-classes');
+        $(".main-wrapper").addClass("container");
+      }else if(nowLayoutClass === 'layout-2') {
+        $("body").addClass("layout-2");
+      }
+    }
+  }
+
+  React.useEffect(()=>{
+    $(window).resize(toggleLayout);
+    toggleLayout();
+  })
+
+  return (
+    <div id="app">
+      <div className="main-wrapper">
+        <div className="navbar-bg"></div>
+        <AppDefaultNavbar toggleSidebar={toggleSidebar} />
+        <div className="main-sidebar">
+        <AppDefaultASide />
+      </div>
+      </div>
+    </div>
+  );
+};
 export default AppDefaultContainer;

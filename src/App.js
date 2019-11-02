@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import { HashRouter, Route } from "react-router-dom";
-import "jquery/dist/jquery";
-import "bootstrap/dist/js/bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ApolloProvider as ApolloHooksProvider } from "react-apollo-hooks";
-import "bootstrap-social/bootstrap-social.css";
-import "./assets/css/style.css";
-import "./assets/css/components.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import "bootstrap/dist/js/bootstrap.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-social/bootstrap-social.css";
+
+import "./assets/css/style.css";
+import "./assets/css/components.css";
+// import "./assets/js/stisla.js";
+// import "./assets/js/scripts.js";
 
 import Default from "./containers/default";
 import LoginPage from './pages/auth/login'

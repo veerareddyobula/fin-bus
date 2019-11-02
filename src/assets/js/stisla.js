@@ -1,5 +1,8 @@
 "use strict";
 
+import moment from 'moment';
+import * as jQuery from "jquery";
+
 (function($, window, i) {
   // Bootstrap 4 Modal
   $.fn.fireModal = function(options) {

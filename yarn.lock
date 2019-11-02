@@ -6892,6 +6892,11 @@ mobx@^5.14.0:
   resolved "https://artylab.expedia.biz/api/npm/public-npm-virtual/mobx/-/mobx-5.14.2.tgz#608b8ee9bc9f9e406b48da676e677b150e901eba"
   integrity sha1-YIuO6byfnkBrSNpnbmd7FQ6QHro=
 
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://artylab.expedia.biz/api/npm/public-npm-virtual/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha1-DQVdU/UFKqZTyfbraLtdEr9cK1s=
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://artylab.expedia.biz/api/npm/public-npm-virtual/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
