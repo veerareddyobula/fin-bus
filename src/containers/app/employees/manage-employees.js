@@ -22,7 +22,7 @@ const ManageEmployeesContainer = () => {
       <div className="section-body">
         <div className="d-flex justify-content-end m-2">
           <a href="#/" className="btn btn-icon icon-left btn-info">
-            <FontAwesomeIcon icon={["fas", "bus"]} /> Add New Bus
+            <FontAwesomeIcon icon={["fas", "bus"]} /> Add New Employee
           </a>
         </div>
         <div className="card">
