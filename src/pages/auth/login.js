@@ -73,13 +73,7 @@ const LoginPage = ({ history }) => {
                       <div className="card-header d-flex justify-content-between">
                         <h4>Login</h4>
                         <div className="login-brand">
-                          <img
-                            src="images/logo.png"
-                            alt="logo"
-                            height="32rem"
-                            className="shadow-light rounded-circle"
-                          />{" "}
-                          Fin-Bus
+                          <FontAwesomeIcon icon={["fas", "bus-alt"]} /> Fin-Bus
                         </div>
                       </div>
 
@@ -120,7 +114,10 @@ const LoginPage = ({ history }) => {
 
                           <div className="form-group">
                             <div className="d-block">
-                              <label htmlFor="password" className="control-label">
+                              <label
+                                htmlFor="password"
+                                className="control-label"
+                              >
                                 Password
                               </label>
                               <div className="float-right">
@@ -195,8 +192,7 @@ const LoginPage = ({ history }) => {
                       </div>
                     </div>
                     <div className="mt-5 text-muted text-center">
-                      Don't have an account?{" "}
-                      <a href="auth-register.html">Create One</a>
+                      Don't have an account? <a href="#/signUp">Create One</a>
                     </div>
                     <div className="simple-footer">
                       Copyright &copy; Fin-Bus 2019
